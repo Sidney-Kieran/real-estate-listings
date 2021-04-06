@@ -36,7 +36,7 @@ if (process.env.MONGODB_URI != undefined) {
     databaseURI = process.env.MONGODB_URI;
 } else {
     // use the local database server
-    databaseURI = 'mongodb://localhost:27017/realestate';
+    databaseURI = 'mongodb+srv://readwrite:test123@cluster0.5joxe.mongodb.net/store?retryWrites=true&w=majority';
 }
 
 mongoose.connect(databaseURI);
