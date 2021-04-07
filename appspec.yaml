@@ -5,12 +5,12 @@ Resources:
       Properties:
         TaskDefinition: "<TASK_DEFINITION>"
         LoadBalancerInfo:
-          ContainerName: "RealEstateApp"
+          ContainerName: "myapp"
           ContainerPort: 5000
         # Optional properties
         PlatformVersion: "LATEST"
         NetworkConfiguration:
           AwsvpcConfiguration:
-            Subnets: ["subnet-02531f73dd3320ff3"]
+            Subnets: ["subnet-02531f73dd3320ff3","subnet-012125ec928f743bf"]
             SecurityGroups: ["sg-07713301babc35be8"]
             AssignPublicIp: "ENABLED"
