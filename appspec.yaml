@@ -1,0 +1,16 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "<TASK_DEFINITION>"
+        LoadBalancerInfo:
+          ContainerName: "RealEstateApp"
+          ContainerPort: 5000
+        # Optional properties
+        PlatformVersion: "LATEST"
+        NetworkConfiguration:
+          AwsvpcConfiguration:
+            Subnets: ["subnet-02531f73dd3320ff3"]
+            SecurityGroups: ["sg-07713301babc35be8"]
+            AssignPublicIp: "ENABLED"
